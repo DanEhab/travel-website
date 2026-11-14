@@ -20,19 +20,32 @@
             color: white;
             -webkit-text-stroke: 0.5px black;
         }
+        .error-message {
+            color: #ffdddd;
+            background-color: rgba(176, 0, 32, 0.75);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin: 20px auto 0;
+            padding: 8px 16px;
+            width: fit-content;
+            border-radius: 6px;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Registration</h1>
     </div>
+    <% if (typeof errorMessage !== 'undefined' && errorMessage) { %>
+        <div class="error-message"><%= errorMessage %></div>
+    <% } %>
     <div class="cont">
         <form method='post' action='/register'>
             Username: <br>
