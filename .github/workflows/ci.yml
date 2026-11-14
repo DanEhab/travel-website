@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:7
+        ports:
+          - 27017:27017
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Seed the destinations
+        run: npm run seed
+      - name: Start the website
+        run: |
+          npm start > server.log 2>&1 &
+          for i in $(seq 1 30); do curl -s localhost:3000/login > /dev/null && break; sleep 1; done
+      - name: Run the end-to-end tests
+        run: npm test
+      - name: Server log
+        if: always()
+        run: cat server.log
