@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "675dd03ff9b1ff6cbb0f9a00"
+  },
+  "name": "Paris",
+  "category": "Cities",
+  "description": "The City of Light, known for its art, fashion, and culture.",
+  "videoURL": "https://www.youtube.com/watch?v=abc123"
+},
+{
+  "_id": {
+    "$oid": "675dd049f9b1ff6cbb0f9a02"
+  },
+  "name": "Bali",
+  "category": "Islands",
+  "description": "A tropical paradise with stunning beaches and lush forests.",
+  "videoURL": "https://www.youtube.com/watch?v=xyz456"
+},
+{
+  "_id": {
+    "$oid": "675dd055f9b1ff6cbb0f9a04"
+  },
+  "name": "Santorini",
+  "category": "Islands",
+  "description": "A picturesque island with white-washed buildings and stunning sunsets.",
+  "videoURL": "https://www.youtube.com/watch?v=def789"
+},
+{
+  "_id": {
+    "$oid": "675ddefbf9b1ff6cbb0f9a0c"
+  },
+  "name": "Inca",
+  "category": "Hiking",
+  "description": "A historic trail leading to the ancient ruins of Machu Picchu.",
+  "image": "inca.png"
+},
+{
+  "_id": {
+    "$oid": "675ddf0af9b1ff6cbb0f9a0e"
+  },
+  "name": "Annapurna",
+  "category": "Hiking",
+  "description": "A trek through the Annapurna mountain range in Nepal.",
+  "image": "annapurna.png"
+},
+{
+  "_id": {
+    "$oid": "675ddf21f9b1ff6cbb0f9a10"
+  },
+  "name": "Rome",
+  "category": "Cities",
+  "description": "The Eternal City, home to ancient ruins and the Vatican.",
+  "image": "rome.png"
+}]
